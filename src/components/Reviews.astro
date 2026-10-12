@@ -1,5 +1,4 @@
 ---
-import { rating } from '../data/site';
 const { t, site } = Astro.props;
 const testimonials = t.testimonials;
 ---
@@ -35,7 +34,7 @@ const testimonials = t.testimonials;
         rel="noopener"
         class="text-sm font-extrabold underline underline-offset-4"
       >
-        Ver las {rating.reviews} reseñas en Google
+        {testimonials.seeAll}
       </a>
     </p>
   </div>
