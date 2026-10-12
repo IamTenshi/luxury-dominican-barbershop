@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #faf8f4;
+  --color-ink: #1c1915;
+  --color-muted: #6b6259;
+  --color-line: rgba(28, 25, 21, 0.12);
+  --color-coal: #171310;
+  --color-cream: #f5efe2;
+  --color-sand: #a89c88;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

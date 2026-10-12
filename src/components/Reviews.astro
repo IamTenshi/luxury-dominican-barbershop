@@ -1,0 +1,40 @@
+---
+import { testimonials, rating, site } from '../data/site';
+---
+<section class="border-t border-line">
+  <div class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
+    <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-muted">
+      {testimonials.kicker}
+    </p>
+    <h2 class="text-[clamp(30px,4.5vw,44px)] font-extrabold tracking-tight">
+      {testimonials.heading}
+    </h2>
+    <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-muted">
+      <span class="tracking-[0.18em] text-ink" aria-hidden="true">★★★★★</span>
+      <span>
+        {testimonials.intro}
+      </span>
+    </p>
+    <div class="mt-10 grid grid-cols-2 gap-px border border-line bg-line max-sm:grid-cols-1">
+      {testimonials.items.map((t) => (
+        <figure class="m-0 bg-paper p-7">
+          <span class="tracking-[0.18em]" aria-hidden="true">★★★★★</span>
+          <blockquote class="mt-3 text-lg font-bold leading-relaxed">
+            “{t.text}”
+          </blockquote>
+          <figcaption class="mt-3 text-sm text-muted">— {t.source}</figcaption>
+        </figure>
+      ))}
+    </div>
+    <p class="mt-6 text-center">
+      <a
+        href={site.mapsUrl}
+        target="_blank"
+        rel="noopener"
+        class="text-sm font-extrabold underline underline-offset-4"
+      >
+        Ver las {rating.reviews} reseñas en Google
+      </a>
+    </p>
+  </div>
+</section>

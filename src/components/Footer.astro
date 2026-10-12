@@ -1,0 +1,31 @@
+---
+import { site, footer } from '../data/site';
+---
+<footer class="bg-coal text-cream">
+  <div class="mx-auto max-w-[1100px] px-5 py-14 text-center">
+    <img
+      src="/images/logo.jpg"
+      alt="Logo de Luxury Dominican Barbershop"
+      class="mx-auto mb-5 h-16 w-16 rounded-full object-cover"
+    />
+    <p class="text-[clamp(28px,4.5vw,40px)] font-extrabold tracking-tight">
+      {footer.titleA} {footer.titleB}
+    </p>
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+      <a href={`tel:${site.phone}`} class="bg-cream px-6 py-3 text-sm font-extrabold text-coal no-underline">
+        {footer.callShop} — {site.phoneDisplay}
+      </a>
+      <a
+        href={site.instagram}
+        target="_blank"
+        rel="noopener"
+        class="text-sm font-bold text-cream/80 underline underline-offset-4"
+      >
+        {site.instagramHandle}
+      </a>
+    </div>
+    <p class="mt-8 text-xs uppercase tracking-[0.18em] text-cream/50">
+      {site.address.street} · {site.address.city}
+    </p>
+  </div>
+</footer>
