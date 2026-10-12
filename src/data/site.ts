@@ -13,12 +13,11 @@ export const site = {
     street: '4325 Atlanta Hwy, Suite 12',
     city: 'Loganville, GA 30052',
   },
-  mapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=Luxury+Dominican+Barbershop+4325+Atlanta+Hwy+Loganville+GA+30052',
+  mapsUrl: 'https://maps.app.goo.gl/ZfvQoFotpFieyeEA6',
 };
 
 export const rating = {
   stars: '4.8',
-  reviews: '88',
+  reviews: '89',
   source: 'Google',
 };

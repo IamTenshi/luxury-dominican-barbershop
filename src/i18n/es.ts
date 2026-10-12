@@ -102,7 +102,7 @@ export const t = {
     kicker: 'Reseñas',
     heading: 'Clientes satisfechos.',
     intro:
-      'Más de 5,000 clientes satisfechos. En Google: 4.8 de 5 con 88 reseñas. Esto dicen quienes ya pasaron por la silla:',
+      'Más de 5,000 clientes satisfechos. En Google: 4.8 de 5 con 89 reseñas. Esto dicen quienes ya pasaron por la silla:',
     items: [
       {
         text: 'Destacan a Roberto por un corte nítido y de calidad.',
@@ -113,7 +113,7 @@ export const t = {
         source: 'Reseñas de Google',
       },
     ],
-    seeAll: 'Ver las 88 reseñas en Google',
+    seeAll: 'Ver las 89 reseñas en Google',
   },
   visit: {
     id: 'visitanos',

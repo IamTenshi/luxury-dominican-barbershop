@@ -102,7 +102,7 @@ export const t = {
     kicker: 'Reviews',
     heading: 'Happy clients.',
     intro:
-      'Over 5,000 happy clients. On Google: 4.8 out of 5 with 88 reviews. Here is what people are saying:',
+      'Over 5,000 happy clients. On Google: 4.8 out of 5 with 89 reviews. Here is what people are saying:',
     items: [
       {
         text: 'Roberto gets praised for sharp, quality cuts.',
@@ -113,7 +113,7 @@ export const t = {
         source: 'Google reviews',
       },
     ],
-    seeAll: 'See all 88 reviews on Google',
+    seeAll: 'See all 89 reviews on Google',
   },
   visit: {
     id: 'visit',
