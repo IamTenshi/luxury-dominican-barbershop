@@ -1,7 +1,8 @@
 ---
-import { work } from '../data/site';
+const { t, site } = Astro.props;
+const work = t.work;
 ---
-<section id="trabajos" class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
+<section id={work.id} class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
   <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-muted">
     {work.kicker}
   </p>
@@ -19,7 +20,7 @@ import { work } from '../data/site';
       rel="noopener"
       class="text-sm font-extrabold underline underline-offset-4"
     >
-      Ver más en Instagram
+      {work.moreOnInstagram}
     </a>
   </p>
 </section>

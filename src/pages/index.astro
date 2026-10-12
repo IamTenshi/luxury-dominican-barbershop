@@ -8,20 +8,18 @@ import Work from '../components/Work.astro';
 import Reviews from '../components/Reviews.astro';
 import Visit from '../components/Visit.astro';
 import Footer from '../components/Footer.astro';
-import { site } from '../data/site';
+import { site, rating } from '../data/site';
+import { t } from '../i18n/en';
 ---
-<Layout
-  title={`${site.name} — Barbería dominicana en ${site.city}`}
-  description="Fades nítidos, barba detallada y recortes de precisión en Luxury Dominican Barbershop, Loganville, Georgia. Sin cita: entra y siéntate."
->
-  <Header />
+<Layout title={t.meta.title} description={t.meta.description} lang={t.lang}>
+  <Header site={site} t={t} />
   <main id="contenido">
-    <Hero />
-    <Services />
-    <Precision />
-    <Work />
-    <Reviews />
-    <Visit />
+    <Hero site={site} t={t} />
+    <Services t={t} />
+    <Precision t={t} />
+    <Work site={site} t={t} />
+    <Reviews site={site} t={t} />
+    <Visit site={site} t={t} />
   </main>
-  <Footer />
+  <Footer site={site} t={t} />
 </Layout>

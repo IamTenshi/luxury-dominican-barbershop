@@ -1,7 +1,8 @@
 ---
-import { services } from '../data/site';
+const { t } = Astro.props;
+const services = t.services;
 ---
-<section id="servicios" class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
+<section id={services.id} class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
   <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-muted">
     {services.kicker}
   </p>

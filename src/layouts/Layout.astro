@@ -2,12 +2,13 @@
 interface Props {
   title: string;
   description?: string;
+  lang?: string;
 }
-const { title, description = '' } = Astro.props;
+const { title, description = '', lang = 'en' } = Astro.props;
 import '../styles/global.css';
 ---
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />

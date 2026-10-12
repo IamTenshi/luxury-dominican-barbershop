@@ -1,7 +1,9 @@
 ---
-import { site, visit } from '../data/site';
+const { t, site } = Astro.props;
+const visit = t.visit;
+const hours = t.hours;
 ---
-<section id="visitanos" class="border-t border-line">
+<section id={visit.id} class="border-t border-line">
   <div class="mx-auto grid max-w-[1100px] grid-cols-2 items-start gap-10 px-5 py-16 max-md:grid-cols-1 max-sm:py-12">
     <div>
       <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-muted">
@@ -11,7 +13,7 @@ import { site, visit } from '../data/site';
       <p class="mt-3 max-w-[480px] leading-relaxed text-muted">{visit.lead}</p>
       <div class="mt-8 space-y-6">
         <div>
-          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">Dirección</h3>
+          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">{visit.addressLabel}</h3>
           <p class="mt-1 font-bold">
             {site.address.place}<br />
             {site.address.street}<br />
@@ -19,9 +21,9 @@ import { site, visit } from '../data/site';
           </p>
         </div>
         <div>
-          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">Horario</h3>
+          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">{visit.hoursLabel}</h3>
           <div class="mt-1 font-bold">
-            {site.hours.map((h) => (
+            {hours.map((h) => (
               <p class="flex justify-between gap-4 py-0.5">
                 <span>{h.days}</span>
                 <span class="font-normal text-muted">{h.time}</span>
@@ -30,7 +32,7 @@ import { site, visit } from '../data/site';
           </div>
         </div>
         <div>
-          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">Teléfono</h3>
+          <h3 class="text-xs font-extrabold uppercase tracking-[0.18em] text-muted">{visit.phoneLabel}</h3>
           <a href={`tel:${site.phone}`} class="mt-1 inline-block text-xl font-extrabold underline underline-offset-4">
             {site.phoneDisplay}
           </a>
@@ -43,7 +45,7 @@ import { site, visit } from '../data/site';
           rel="noopener"
           class="bg-ink px-7 py-3.5 text-sm font-extrabold text-paper no-underline"
         >
-          Abrir en Maps
+          {visit.mapsCta}
         </a>
         <a
           href={site.instagram}

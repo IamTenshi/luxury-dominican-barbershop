@@ -1,12 +1,13 @@
 ---
-import { site, navLinks } from '../data/site';
+const { site, t } = Astro.props;
+const navLinks = t.navLinks;
 ---
 <header class="border-b border-line bg-paper">
   <div class="mx-auto flex max-w-[1100px] items-center justify-between gap-4 px-5 py-3.5">
-    <a href="#top" class="flex items-center gap-3 no-underline" aria-label="Luxury Dominican Barbershop — inicio">
+    <a href="#top" class="flex items-center gap-3 no-underline" aria-label={t.homeLabel}>
       <img
         src="/images/logo.jpg"
-        alt="Logo de Luxury Dominican Barbershop"
+        alt={t.footer.logoAlt}
         class="h-11 w-11 rounded-full object-cover"
       />
       <span class="text-[15px] font-extrabold leading-tight">
@@ -21,17 +22,33 @@ import { site, navLinks } from '../data/site';
         </a>
       ))}
       <a
+        href={t.toggleHref}
+        class="border border-ink/30 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.1em] text-ink no-underline"
+        aria-label={t.lang === 'es' ? 'Switch to English' : 'Cambiar a español'}
+      >
+        {t.toggleLabel}
+      </a>
+      <a
         href={`tel:${site.phone}`}
         class="bg-ink px-5 py-2.5 text-sm font-extrabold text-paper no-underline"
       >
         {site.phoneDisplay}
       </a>
     </nav>
-    <a
-      href={`tel:${site.phone}`}
-      class="bg-ink px-4 py-2 text-xs font-extrabold text-paper no-underline md:hidden"
-    >
-      Llamar
-    </a>
+    <div class="flex items-center gap-2 md:hidden">
+      <a
+        href={t.toggleHref}
+        class="border border-ink/30 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.1em] text-ink no-underline"
+        aria-label={t.lang === 'es' ? 'Switch to English' : 'Cambiar a español'}
+      >
+        {t.toggleLabel}
+      </a>
+      <a
+        href={`tel:${site.phone}`}
+        class="bg-ink px-4 py-2 text-xs font-extrabold text-paper no-underline"
+      >
+        {t.callButton}
+      </a>
+    </div>
   </div>
 </header>

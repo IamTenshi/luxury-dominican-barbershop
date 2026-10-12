@@ -1,7 +1,9 @@
 ---
-import { testimonials, rating, site } from '../data/site';
+import { rating } from '../data/site';
+const { t, site } = Astro.props;
+const testimonials = t.testimonials;
 ---
-<section class="border-t border-line">
+<section id={testimonials.id} class="border-t border-line">
   <div class="mx-auto max-w-[1100px] px-5 py-16 max-sm:py-12">
     <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.22em] text-muted">
       {testimonials.kicker}
