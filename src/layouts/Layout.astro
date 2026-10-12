@@ -6,6 +6,7 @@ interface Props {
 }
 const { title, description = '', lang = 'en' } = Astro.props;
 import '../styles/global.css';
+import Analytics from '@vercel/analytics/astro';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -23,5 +24,6 @@ import '../styles/global.css';
   </head>
   <body class="bg-paper font-sans text-ink antialiased">
     <slot />
+    <Analytics />
   </body>
 </html>
